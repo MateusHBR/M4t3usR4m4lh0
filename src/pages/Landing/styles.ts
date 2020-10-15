@@ -30,7 +30,7 @@ export const Container = styled.div`
 
     a {
       height: 70px;
-      width: 240px;
+      width: 350px;
       background: #c5312a;
       border-radius: 20px;
       box-shadow: inset 0px -9px 0px ${shade(0.2, '#C5312A')};
