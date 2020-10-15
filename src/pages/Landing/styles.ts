@@ -48,6 +48,10 @@ export const Container = styled.div`
       &:hover {
         background: ${shade(0.2, '#C5312A')};
       }
+
+      svg {
+        margin-left: 8px;
+      }
     }
   }
 
