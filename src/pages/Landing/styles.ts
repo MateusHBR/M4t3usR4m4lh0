@@ -28,7 +28,7 @@ export const Container = styled.div`
     background-position: 100%, 60%;
     background-repeat: no-repeat;
 
-    a {
+    .pokemons {
       height: 70px;
       width: 350px;
       background: #c5312a;

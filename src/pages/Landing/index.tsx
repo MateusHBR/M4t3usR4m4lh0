@@ -10,13 +10,15 @@ const Landing: React.FC = () => {
   return (
     <Container>
       <div>
-        <img src={Logo} alt="Logo" />
+        <Link to="/">
+          <img src={Logo} alt="Logo" />
+        </Link>
 
         <Main>
           <h1>Encontre seus pokemons favoritos</h1>
         </Main>
 
-        <Link to="/pokemons">
+        <Link className="pokemons" to="/pokemons">
           Acesse a Pokedex
           <FiArrowRight />
         </Link>
