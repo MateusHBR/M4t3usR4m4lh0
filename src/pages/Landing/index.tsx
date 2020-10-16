@@ -18,7 +18,7 @@ const Landing: React.FC = () => {
           <h1>Encontre seus pokemons favoritos</h1>
         </Main>
 
-        <Link className="pokemons" to="/pokemons">
+        <Link className="pokemons" to="/home">
           Acesse a Pokedex
           <FiArrowRight />
         </Link>
