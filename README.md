@@ -20,8 +20,7 @@
 
 
 
-
-## Sobre 🏷 <a name="about" />
+## Sobre 🏷 ​<a name="about" />
 
 A **Pokedex** foi um desafio proposto pela empresa Mercadou, com o objetivo de consumir uma API Pública.
 
