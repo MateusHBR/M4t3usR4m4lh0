@@ -1,7 +1,7 @@
 
 
 <h1 align="center">
-	<img src="./logo.svg" alt="Logo"/>
+	<img src="./src/images/Logo.svg" alt="Logo"/>
 </h1>
 
 
@@ -12,7 +12,8 @@
 	<a href="#about"> Sobre o desafio </a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   	<a href="#techs"> Tecnologias </a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
    	<a href="#clone"> Clonando Repositório </a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-    <a href="#exec"> Executar código
+    <a href="#exec"> Executar código </a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+    <a href="#error"> Página de Erro
 </p>
 
 
@@ -20,7 +21,7 @@
 
 
 
-## Sobre 🏷<a name="about" />
+## Sobre 🏷 <a name="about" />
 
 A **Pokedex** foi um desafio proposto pela empresa Mercadou, com o objetivo de consumir uma API Pública.
 
@@ -53,6 +54,7 @@ Acesse a pasta do projeto e instale as Dependências:
   **`yarn`**
 
 - Caso use Npm:
+
   **`npm install`**
 
 
@@ -70,6 +72,6 @@ Para executar o projeto:
 
 E a aplicação web estará rodando no url: <a href="http://localhost:3000" target="_blank">http://localhost:3000 </a>
 
-## Página de Error
+## Página de Error 🔥 <a name="error"/>
 
 Tomei a liberdade de criar uma página de erro, pois ao tentar acessar uma rota inexistente, cairá nessa página.
