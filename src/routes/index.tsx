@@ -9,10 +9,11 @@ import Pokemon from '../pages/Pokemon';
 const Routes: React.FC = () => (
   <Switch>
     <Route path="/" exact component={Landing} />
-    <Route path="/home" component={Home} />
-    <Route path="/pokemon/:id" component={Pokemon} />
+    <Route path="/home" exact component={Home} />
+    <Route path="/pokemon/:id" exact component={Pokemon} />
     <Route component={NotFound} />
   </Switch>
 );
+// Estou fazendo minhas rotas que terão na minha aplicação
 
 export default Routes;

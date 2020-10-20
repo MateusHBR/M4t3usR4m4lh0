@@ -11,9 +11,11 @@ import Header from '../../components/Header';
 
 const Home: React.FC = () => {
   const [kantoPokemons, setKantoPokemons] = useState<PokemonSpecies[]>([]);
+  // Estado de pokemons de Kanto
   const [filteredPokemonList, setFilteredPokemonList] = useState<
     PokemonSpecies[]
   >([]);
+  // Estado de filtro de pokemon
 
   const types = [
     { id: 0, name: 'All' },
@@ -36,6 +38,7 @@ const Home: React.FC = () => {
     { id: 17, name: 'dark' },
     { id: 18, name: 'fairy' },
   ];
+  // Aqui defino os tipos de pokemon
 
   function loadKantoPokemons() {
     api.get('/api/v2/pokedex/2/').then((response) => {
@@ -45,7 +48,7 @@ const Home: React.FC = () => {
 
   useEffect(() => {
     loadKantoPokemons();
-  }, []);
+  }, []); // Quando o componente for montado ele fará um get nos pokemons de kanto
 
   async function handlePokemons(id: number): Promise<void> {
     setFilteredPokemonList([]);
@@ -53,12 +56,15 @@ const Home: React.FC = () => {
       loadKantoPokemons();
     } else {
       const pokemons: PokemonSpecies[] = kantoPokemons;
-
+      // pego todos pokemons de kanto
       const response = await api.get(`/api/v2/type/${id}`);
+      // faço uma Request no tipo de pokemon que foi informado pelo usuario
 
       const PokemonNamesFromCurrentType: IPokemonType = response.data;
+      // Pego apenas os pokemons do tipo desejado
 
       const filteredPokemons: PokemonSpecies[] = [];
+      // crio uma variavel que terá uma lista dos pokemons filtrados
 
       pokemons.forEach((pokemon) => {
         for (
@@ -73,7 +79,7 @@ const Home: React.FC = () => {
             filteredPokemons.push(pokemon);
           }
         }
-      });
+      }); // atribuo a minha lista penas os pokemons daquele tipo
 
       if (filteredPokemons.length > 0) {
         setFilteredPokemonList(filteredPokemons);
@@ -86,7 +92,7 @@ const Home: React.FC = () => {
           },
         };
         setFilteredPokemonList([inexistentPokemon]);
-      }
+      } // Seto o estado dos meus pokemons
     }
   }
 
@@ -116,9 +122,8 @@ const Home: React.FC = () => {
                 <div>
                   <p>
                     {`
-                  #${String(pokemon.entry_number).padStart(3, '0')} ${
-                      pokemon.pokemon_species.name
-                    }
+                  #${String(pokemon.entry_number).padStart(3, '0')} ${pokemon.pokemon_species.name
+                      }
                   `}
                   </p>
                 </div>
@@ -135,9 +140,8 @@ const Home: React.FC = () => {
                 <div>
                   <p>
                     {`
-                #${String(pokemon.entry_number).padStart(3, '0')} ${
-                      pokemon.pokemon_species.name
-                    }
+                #${String(pokemon.entry_number).padStart(3, '0')} ${pokemon.pokemon_species.name
+                      }
                 `}
                   </p>
                 </div>

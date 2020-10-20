@@ -1,5 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
 
+// Estou criando um css global de reset de alguns atributos
 export default createGlobalStyle`
   * {
     margin: 0;

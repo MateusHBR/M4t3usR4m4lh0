@@ -6,6 +6,7 @@ import { FiArrowRight } from 'react-icons/fi';
 import { Container, Main } from './styles';
 import Logo from '../../images/Logo.svg';
 
+// Pagina principal, Landing Page
 const Landing: React.FC = () => {
   return (
     <Container>
